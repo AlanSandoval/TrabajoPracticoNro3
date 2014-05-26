@@ -19,6 +19,7 @@ package tp3
     //Descendente
     list.sort{a,b-> a.size()==b.size()?a<=>b:b.size()<=>a.size()}
     list.each{println it}
+    
 	
 
 
