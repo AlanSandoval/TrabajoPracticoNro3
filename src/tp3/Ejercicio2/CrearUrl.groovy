@@ -1,13 +1,12 @@
-package tp3.Ejercicio2
-import tp3.TP3
-
+package tp3
 /**
  *
  * @author AlanSandoval
  */
-class Url2 {
+
+class CrearUrl {
     def url
-    def ReadLines(){
+    def readLines(){
         map=[:] // tiene lado clave y valor
         this.url.toURL().eachLine{texto,indice->
         map[indice]=texto.size()
@@ -15,10 +14,9 @@ class Url2 {
     }	
 }
 
-public static void main(String[] args) {
-    def miUrl= new Url2() 
+    def miUrl= new CrearUrl() 
     miUrl.url = "http://www.ibm.com/developerworks/java/library/j-pg04149/"
-    maps=readLines(); // obtengo el map con completo 
-    maps.eachWithIndex({it,indice->println "Indice:$indice $it"})
-}
+    maps=miUrl.readLines() // obtengo el map con completo 
+    maps.eachWithIndex({it,indice->println "Indice:$indice  tiene $it"})
+
 
